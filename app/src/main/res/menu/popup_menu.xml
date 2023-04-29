@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action"
+        android:title="More"
+        android:icon="@drawable/baseline_menu_24"
+        app:showAsAction="never">
+
+        <menu>
+
+            <item
+                android:title="DAN (Daily Average Nutrition)"
+                android:id="@+id/item_one"
+                android:icon="@drawable/baseline_donut_large_24"
+                app:showAsAction="ifRoom|withText"/>
+            <item
+                android:title="Recommended products"
+                android:id="@+id/item_two"
+                android:icon="@drawable/baseline_food_bank_24"
+                app:showAsAction="ifRoom|withText"/>
+            <item
+                android:title="Health advice"
+                android:id="@+id/item_three"
+                android:icon="@drawable/baseline_health_and_safety_24"
+                app:showAsAction="ifRoom|withText"/>
+            <item
+                android:title="Pedometer"
+                android:id="@+id/item_four"
+                android:icon="@drawable/baseline_directions_walk_24"
+                app:showAsAction="ifRoom|withText"/>
+
+        </menu>
+
+    </item>
+
+    <item
+        android:id="@+id/action2"
+        android:title="Reach Us"
+        app:showAsAction="never">
+
+        <menu>
+
+            <item
+                android:title="Reach Us"
+                android:id="@+id/item_five"
+                android:icon="@drawable/baseline_send_24"
+                app:showAsAction="ifRoom|withText"/>
+
+        </menu>
+
+    </item>
+
+</menu>
