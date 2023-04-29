@@ -7,9 +7,7 @@
         android:title="More"
         android:icon="@drawable/baseline_menu_24"
         app:showAsAction="never">
-
         <menu>
-
             <item
                 android:title="DAN (Daily Average Nutrition)"
                 android:id="@+id/item_one"
@@ -30,26 +28,25 @@
                 android:id="@+id/item_four"
                 android:icon="@drawable/baseline_directions_walk_24"
                 app:showAsAction="ifRoom|withText"/>
-
         </menu>
-
     </item>
 
     <item
         android:id="@+id/action2"
         android:title="Reach Us"
         app:showAsAction="never">
-
         <menu>
-
             <item
-                android:title="Reach Us"
+                android:title="E-mail"
                 android:id="@+id/item_five"
-                android:icon="@drawable/baseline_send_24"
+                android:icon="@drawable/baseline_email_24"
                 app:showAsAction="ifRoom|withText"/>
-
+            <item
+                android:title="Google Form"
+                android:id="@+id/item_six"
+                android:icon="@drawable/baseline_description_24"
+                app:showAsAction="ifRoom|withText"/>
         </menu>
-
     </item>
 
 </menu>

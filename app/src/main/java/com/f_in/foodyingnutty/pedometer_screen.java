@@ -113,11 +113,11 @@ public class pedometer_screen extends AppCompatActivity implements SensorEventLi
                         public void onMapReady(@NonNull GoogleMap googleMap) {
                             LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
 
-                            //MarkerOptions options = new MarkerOptions().position(latLng).title("You are here");
+                            MarkerOptions options = new MarkerOptions().position(latLng).title("You are here");
 
                             googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,15));
 
-                            //googleMap.addMarker(options);
+                            googleMap.addMarker(options);
 
                             googleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
 
