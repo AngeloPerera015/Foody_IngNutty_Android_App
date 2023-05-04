@@ -8,6 +8,7 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.location.Location;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -27,7 +28,6 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 
@@ -96,6 +96,12 @@ public class pedometer_screen extends AppCompatActivity implements SensorEventLi
                     startActivity(new Intent(pedometer_screen.this, health_advice_screen.class));
                 if (menuItem.getItemId() == R.id.item_four)
                     startActivity(new Intent(pedometer_screen.this, pedometer_screen.class));
+                if (menuItem.getItemId() == R.id.item_five)
+                    startActivity(new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:foodyingnutty@gmail.com")));
+                if (menuItem.getItemId() == R.id.item_six)
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://bit.ly/foodyingnutty_f-s")));
+                if (menuItem.getItemId() == R.id.item_seven)
+                    startActivity(new Intent(pedometer_screen.this, community_log_in.class));
                 return true;
             }
         });
@@ -113,11 +119,7 @@ public class pedometer_screen extends AppCompatActivity implements SensorEventLi
                         public void onMapReady(@NonNull GoogleMap googleMap) {
                             LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
 
-                            MarkerOptions options = new MarkerOptions().position(latLng).title("You are here");
-
                             googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,15));
-
-                            googleMap.addMarker(options);
 
                             googleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
 

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "193193557170",
+    "firebase_url": "https://foody-ingnutty-ed162-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "foody-ingnutty-ed162",
+    "storage_bucket": "foody-ingnutty-ed162.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:193193557170:android:208fc64a2de4f4b5005dab",
+        "android_client_info": {
+          "package_name": "com.f_in.foodyingnutty"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "193193557170-234k2p0a494b4nv7evgft47nq8n270re.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOiryLF2tr-TkNSwuqtZeIvOW3akAqel4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "193193557170-234k2p0a494b4nv7evgft47nq8n270re.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

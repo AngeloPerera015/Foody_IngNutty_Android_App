@@ -49,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:foodyingnutty@gmail.com")));
                 if (menuItem.getItemId() == R.id.item_six)
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://bit.ly/foodyingnutty_f-s")));
+                if (menuItem.getItemId() == R.id.item_seven)
+                    startActivity(new Intent(MainActivity.this, community_log_in.class));
                 return true;
             }
         });

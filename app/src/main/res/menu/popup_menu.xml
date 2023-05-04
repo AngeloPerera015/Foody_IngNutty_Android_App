@@ -46,6 +46,11 @@
                 android:id="@+id/item_six"
                 android:icon="@drawable/baseline_description_24"
                 app:showAsAction="ifRoom|withText"/>
+            <item
+                android:title="Community"
+                android:id="@+id/item_seven"
+                android:icon="@drawable/baseline_people_24"
+                app:showAsAction="ifRoom|withText"/>
         </menu>
     </item>
 

@@ -1,13 +1,14 @@
 package com.f_in.foodyingnutty;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class daily_average_nutrition_screen extends AppCompatActivity {
 
@@ -39,6 +40,12 @@ public class daily_average_nutrition_screen extends AppCompatActivity {
                     startActivity(new Intent(daily_average_nutrition_screen.this, health_advice_screen.class));
                 if (menuItem.getItemId() == R.id.item_four)
                     startActivity(new Intent(daily_average_nutrition_screen.this, pedometer_screen.class));
+                if (menuItem.getItemId() == R.id.item_five)
+                    startActivity(new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:foodyingnutty@gmail.com")));
+                if (menuItem.getItemId() == R.id.item_six)
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://bit.ly/foodyingnutty_f-s")));
+                if (menuItem.getItemId() == R.id.item_seven)
+                    startActivity(new Intent(daily_average_nutrition_screen.this, community_log_in.class));
                 return true;
             }
         });

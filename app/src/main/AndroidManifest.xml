@@ -17,9 +17,17 @@
         android:theme="@style/Theme.FoodyIngNutty"
         tools:targetApi="31">
         <activity
+            android:name=".community_sign_up"
+            android:exported="false" />
+        <activity
+            android:name=".community_log_in"
+            android:exported="false" />
+        <activity
+            android:name=".community_screen"
+            android:exported="false" />
+        <activity
             android:name=".LogInActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".SignUpActivity"
             android:exported="false" />
