@@ -29,7 +29,7 @@ public class health_advice_screen extends AppCompatActivity {
         });
 
         VideoView videoView = findViewById(R.id.videoView);
-        videoView.setVideoPath("android.resource://"+ getPackageName() + "/" + R.raw.nutrition_for_a_healthy_life_720p);
+        videoView.setVideoURI(Uri.parse("https://firebasestorage.googleapis.com/v0/b/foody-ingnutty-ed162.appspot.com/o/VideoSlider%2Fnutrition_for_a_healthy_life_720p.mp4?alt=media&token=4c6d403b-f06f-46a7-ad72-9d75024133e2"));
         videoView.start();
 
         MediaController mediaController = new MediaController(this);

@@ -9,9 +9,23 @@ import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.models.SlideModel;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
+
+    ImageSlider mainSlider;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +43,25 @@ public class MainActivity extends AppCompatActivity {
         });
 
         title.setText("Foody IngNutty");
+
+        mainSlider = (ImageSlider) findViewById(R.id.image_slider);
+        final List<SlideModel> remoteimages = new ArrayList<>();
+
+        FirebaseDatabase.getInstance().getReference().child("ImageSlider")
+                .addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        for (DataSnapshot data:snapshot.getChildren())
+                            remoteimages.add(new SlideModel(data.child("url").getValue().toString(), data.child("title").getValue().toString(), ScaleTypes.FIT));
+
+                        mainSlider.setImageList(remoteimages, ScaleTypes.FIT);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
     }
 
     private void showMenu(View view){
