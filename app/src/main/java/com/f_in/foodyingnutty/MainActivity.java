@@ -3,8 +3,6 @@ package com.f_in.foodyingnutty;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -27,6 +25,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+
+    private long pressedTime;
 
     ImageSlider mainSlider;
 
@@ -93,24 +93,15 @@ public class MainActivity extends AppCompatActivity {
         popupMenu.show();
     }
 
-    boolean doubleBackToExitPressedOnce = false;
-
     @Override
     public void onBackPressed() {
-        if (doubleBackToExitPressedOnce) {
+
+        if (pressedTime + 2000 > System.currentTimeMillis()) {
             super.onBackPressed();
-            return;
+            finish();
+        } else {
+            Toast.makeText(getBaseContext(), "press Back again to exit", Toast.LENGTH_SHORT).show();
         }
-
-        this.doubleBackToExitPressedOnce = true;
-        Toast.makeText(this, "Press BACK again to exit", Toast.LENGTH_SHORT).show();
-
-        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
-
-            @Override
-            public void run() {
-                doubleBackToExitPressedOnce=false;
-            }
-        }, 2000);
+        pressedTime = System.currentTimeMillis();
     }
 }
