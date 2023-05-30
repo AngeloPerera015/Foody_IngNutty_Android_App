@@ -93,6 +93,11 @@ public class MainActivity extends AppCompatActivity {
         popupMenu.show();
     }
 
+    public void onClickImg(View view) {
+        Intent intent = new Intent(MainActivity.this, product_category.class);
+        startActivity(intent);
+    }
+
     @Override
     public void onBackPressed() {
 

@@ -17,6 +17,9 @@
         android:theme="@style/Theme.FoodyIngNutty"
         tools:targetApi="31">
         <activity
+            android:name=".product_category"
+            android:exported="false" />
+        <activity
             android:name=".community_sign_up"
             android:exported="false" />
         <activity

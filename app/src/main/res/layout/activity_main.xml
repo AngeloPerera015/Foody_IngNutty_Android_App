@@ -45,7 +45,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Browse by:"
+            android:text="Browse FoodyIngNutty:"
             android:textColor="@color/black"
             android:textStyle="bold"
             android:textSize="28sp"
@@ -55,57 +55,22 @@
 
         </TextView>
 
-        <Button
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp">
+
+        </View>
+
+        <ImageButton
+            android:src="@drawable/ic_launcher"
             android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:id="@+id/imgbutton"
+            android:clickable="true"
+            android:onClick="onClickImg"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Brand"
-            android:textAllCaps="false"
-            android:textColor="@color/black"
-            android:textSize="26sp"
-            android:padding="8dp"
-            app:cornerRadius = "30dp">
-
-        </Button>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Name"
-            android:textAllCaps="false"
-            android:textColor="@color/black"
-            android:textSize="26sp"
-            android:padding="8dp"
-            app:cornerRadius = "30dp">
-
-        </Button>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Category"
-            android:textAllCaps="false"
-            android:textColor="@color/black"
-            android:textSize="26sp"
-            android:padding="8dp"
-            app:cornerRadius = "30dp">
-
-        </Button>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Price"
-            android:textAllCaps="false"
-            android:textColor="@color/black"
-            android:textSize="26sp"
-            android:padding="8dp"
-            app:cornerRadius = "30dp">
-
-        </Button>
+            android:background="@null" />
 
     </LinearLayout>
 
