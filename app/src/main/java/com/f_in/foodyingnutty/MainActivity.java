@@ -74,18 +74,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem menuItem) {
                 if (menuItem.getItemId() == R.id.item_one)
-                    startActivity(new Intent(MainActivity.this, daily_average_nutrition_screen.class));
+                    startActivity(new Intent(MainActivity.this, nutrition_plan_screen.class));
                 if (menuItem.getItemId() == R.id.item_two)
-                    startActivity(new Intent(MainActivity.this, recommended_products_screen.class));
-                if (menuItem.getItemId() == R.id.item_three)
                     startActivity(new Intent(MainActivity.this, health_advice_screen.class));
-                if (menuItem.getItemId() == R.id.item_four)
+                if (menuItem.getItemId() == R.id.item_three)
                     startActivity(new Intent(MainActivity.this, pedometer_screen.class));
-                if (menuItem.getItemId() == R.id.item_five)
+                if (menuItem.getItemId() == R.id.item_four)
                     startActivity(new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:foodyingnutty@gmail.com")));
-                if (menuItem.getItemId() == R.id.item_six)
+                if (menuItem.getItemId() == R.id.item_five)
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://bit.ly/foodyingnutty_f-s")));
-                if (menuItem.getItemId() == R.id.item_seven)
+                if (menuItem.getItemId() == R.id.item_six)
                     startActivity(new Intent(MainActivity.this, community_log_in.class));
                 return true;
             }

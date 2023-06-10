@@ -77,7 +77,7 @@ public class community_log_in extends AppCompatActivity {
     }
 
     public void forgotPassword(View view) {
-        AlertDialog.Builder alert = new AlertDialog.Builder(community_log_in.this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(community_log_in.this);
 
         LinearLayout container = new LinearLayout(community_log_in.this);
         container.setOrientation(LinearLayout.VERTICAL);
@@ -94,11 +94,11 @@ public class community_log_in extends AppCompatActivity {
 
         container.addView(input,ip);
 
-        alert.setMessage("Enter your Sign Up E-mail address");
-        alert.setTitle("Forgot Password");
-        alert.setView(container);
+        builder.setMessage("Enter your Sign Up E-mail address");
+        builder.setTitle("Forgot Password");
+        builder.setView(container);
 
-        alert.setPositiveButton("Submit", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton("Submit", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(final DialogInterface dialogInterface, int i) {
                 String entered_email = input.getText().toString();
@@ -114,6 +114,6 @@ public class community_log_in extends AppCompatActivity {
                             }
                         });
             }
-        });
+        }).show();
     }
 }

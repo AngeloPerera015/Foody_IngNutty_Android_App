@@ -9,23 +9,18 @@
         app:showAsAction="never">
         <menu>
             <item
-                android:title="DAN (Daily Average Nutrition)"
+                android:title="Nutrition plan"
                 android:id="@+id/item_one"
                 android:icon="@drawable/baseline_donut_large_24"
                 app:showAsAction="ifRoom|withText"/>
             <item
-                android:title="Recommended products"
-                android:id="@+id/item_two"
-                android:icon="@drawable/baseline_food_bank_24"
-                app:showAsAction="ifRoom|withText"/>
-            <item
                 android:title="Health advice"
-                android:id="@+id/item_three"
+                android:id="@+id/item_two"
                 android:icon="@drawable/baseline_health_and_safety_24"
                 app:showAsAction="ifRoom|withText"/>
             <item
                 android:title="Pedometer"
-                android:id="@+id/item_four"
+                android:id="@+id/item_three"
                 android:icon="@drawable/baseline_directions_walk_24"
                 app:showAsAction="ifRoom|withText"/>
         </menu>
@@ -38,17 +33,17 @@
         <menu>
             <item
                 android:title="E-mail"
-                android:id="@+id/item_five"
+                android:id="@+id/item_four"
                 android:icon="@drawable/baseline_email_24"
                 app:showAsAction="ifRoom|withText"/>
             <item
                 android:title="Google Form"
-                android:id="@+id/item_six"
+                android:id="@+id/item_five"
                 android:icon="@drawable/baseline_description_24"
                 app:showAsAction="ifRoom|withText"/>
             <item
                 android:title="Community"
-                android:id="@+id/item_seven"
+                android:id="@+id/item_six"
                 android:icon="@drawable/baseline_people_24"
                 app:showAsAction="ifRoom|withText"/>
         </menu>

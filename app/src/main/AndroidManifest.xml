@@ -6,8 +6,10 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
 
     <application
+        android:name="androidx.multidex.MultiDexApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -40,10 +42,7 @@
             android:name=".health_advice_screen"
             android:exported="false" />
         <activity
-            android:name=".recommended_products_screen"
-            android:exported="false" />
-        <activity
-            android:name=".daily_average_nutrition_screen"
+            android:name=".nutrition_plan_screen"
             android:exported="false" />
         <activity
             android:name=".SplashActivity"

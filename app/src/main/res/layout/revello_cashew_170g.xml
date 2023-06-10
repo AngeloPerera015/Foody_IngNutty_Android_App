@@ -16,7 +16,7 @@
                 android:id="@+id/img_icon"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/ic_android"
+                android:src="@drawable/revello_cashew_170g"
                 android:elevation="8dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="12dp"/>
@@ -28,17 +28,78 @@
                 android:text="Revello Cashew - 170g"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:padding="8dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:gravity="center_horizontal"
-                android:text="Although this is a demo project, And this project is all about the customization of a Dialog Box. We can design whatever we want!"
+                android:text="Ingredients"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="Sugar, Milk Powder, Cocoa Butter, Cocoa Mass, Cashew Nutts, Emulsifier (476), Soya Lecithin, Natural Identical (Vanilla) Flavour and Salt"
                 android:textColor="@color/black"
                 android:paddingStart="12dp"
                 android:paddingEnd="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="center_horizontal"
+                android:text="(Numbers in brackets as per International Numbering System (INS)"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:textStyle="italic"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:padding="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="Nutrition"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="Energy 110.07kcal/ 460.83kJ, Protein 1.73g"
+                android:textColor="@color/black"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="center_horizontal"
+                android:text="(Average Quantity per Serving)"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:textStyle="italic"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:padding="8dp"/>
 
         </LinearLayout>
 

@@ -71,7 +71,7 @@ public class community_screen extends AppCompatActivity implements View.OnClickL
                 if (menuItem.getItemId() == R.id.menulogout)
                     auth.signOut();
                     finish();
-                    startActivity(new Intent(community_screen.this, MainActivity.class));
+                    startActivity(new Intent(community_screen.this, community_log_in.class));
                 return true;
             }
         });

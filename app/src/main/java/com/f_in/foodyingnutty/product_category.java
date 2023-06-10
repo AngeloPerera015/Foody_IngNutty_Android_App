@@ -35,7 +35,7 @@ public class product_category extends AppCompatActivity {
 
             @Override
             public void onGroupExpand(int groupPosition) {
-                Toast.makeText(getApplicationContext(), expandableListTitle.get(groupPosition) + " List Expanded.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), expandableListTitle.get(groupPosition) + " list expanded.", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -43,7 +43,7 @@ public class product_category extends AppCompatActivity {
 
             @Override
             public void onGroupCollapse(int groupPosition) {
-                Toast.makeText(getApplicationContext(), expandableListTitle.get(groupPosition) + " List Collapsed.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), expandableListTitle.get(groupPosition) + " list collapsed.", Toast.LENGTH_SHORT).show();
             }
         });
 

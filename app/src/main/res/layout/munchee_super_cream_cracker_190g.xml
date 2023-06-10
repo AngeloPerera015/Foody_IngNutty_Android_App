@@ -16,7 +16,7 @@
                 android:id="@+id/img_icon"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/ic_android"
+                android:src="@drawable/munchee_super_cream_cracker_190g"
                 android:elevation="8dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="12dp"/>
@@ -28,17 +28,78 @@
                 android:text="Munchee Super Cream Cracker - 190g"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:padding="8dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:gravity="center_horizontal"
-                android:text="Although this is a demo project, And this project is all about the customization of a Dialog Box. We can design whatever we want!"
+                android:text="Ingredients"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="Wheat Flour, Vegetable Fat, Malt, Salt, Yeast, Corn Flour, Leavening Agents [[Sodium Bicarbonate (500ii), Ammonium Bicarbonate (503ii)]], Emulsifier [[Soya Lecithin (322)]], Vitamins and Plant Extract (Rosemary)"
                 android:textColor="@color/black"
                 android:paddingStart="12dp"
                 android:paddingEnd="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="center_horizontal"
+                android:text="(Numbers in brackets as per International Numbering System (INS)"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:textStyle="italic"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:padding="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="Nutrition"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="Energy 93.05kcal/ 389.59kJ, Protein 2.27g"
+                android:textColor="@color/black"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="center_horizontal"
+                android:text="(Average Quantity per Serving)"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:textStyle="italic"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:padding="8dp"/>
 
         </LinearLayout>
 
