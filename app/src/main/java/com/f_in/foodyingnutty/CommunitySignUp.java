@@ -18,29 +18,25 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
-public class community_sign_up extends AppCompatActivity {
-
+//this is to create the user to signin into the community which runs on the firebase
+public class CommunitySignUp extends AppCompatActivity {
+    //declare variables
     EditText textEmail, textPassword, textName;
     ProgressBar progressBar;
-
     FirebaseAuth auth;
     DatabaseReference reference;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_community_sign_up);
-
+        setContentView(R.layout.activity_community_signup);
         textEmail = (EditText) findViewById(R.id.signup_email);
         textPassword = (EditText) findViewById(R.id.signup_password);
         textName = (EditText) findViewById(R.id.signup_name);
         progressBar = (ProgressBar) findViewById(R.id.signup_progressbar);
-
         auth = FirebaseAuth.getInstance();
         reference = FirebaseDatabase.getInstance().getReference().child("Users");
     }
-
+    //request to create an account and direct to the community
     public void SignupUser(View view) {
         progressBar.setVisibility(View.VISIBLE);
         final String email = textEmail.getText().toString();
@@ -63,15 +59,15 @@ public class community_sign_up extends AppCompatActivity {
                                             @Override
                                             public void onComplete(@NonNull Task<Void> task) {
                                                 if (task.isSuccessful()) {
-                                                    Toast.makeText(community_sign_up.this, "Sign Up Successful!", Toast.LENGTH_SHORT).show();
+                                                    Toast.makeText(CommunitySignUp.this, "Sign Up Successful!", Toast.LENGTH_SHORT).show();
                                                     progressBar.setVisibility(View.GONE);
                                                     finish();
-                                                    Intent intent = new Intent(community_sign_up.this, community_screen.class);
+                                                    Intent intent = new Intent(CommunitySignUp.this, Community.class);
                                                     startActivity(intent);
                                                 }
                                                 else {
                                                     progressBar.setVisibility(View.GONE);
-                                                    Toast.makeText(community_sign_up.this, "Sign Up Failed, Try again!", Toast.LENGTH_SHORT).show();
+                                                    Toast.makeText(CommunitySignUp.this, "Sign Up Failed, Try again!", Toast.LENGTH_SHORT).show();
                                                 }
                                             }
                                         });
@@ -80,9 +76,9 @@ public class community_sign_up extends AppCompatActivity {
                     });
         }
     }
-
+    //button to direct to the login
     public void gotoLogIn(View view) {
-        Intent intent = new Intent(community_sign_up.this, community_log_in.class);
+        Intent intent = new Intent(CommunitySignUp.this, CommunityLogIn.class);
         startActivity(intent);
     }
 }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".product_category">
+    tools:context=".ProductCategory">
 
     <ExpandableListView
         android:id="@+id/expandableListView"

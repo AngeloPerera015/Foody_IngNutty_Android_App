@@ -8,7 +8,7 @@
     android:paddingEnd="35dp"
     android:orientation="vertical"
     android:background="@drawable/splashscreen"
-    tools:context=".community_log_in">
+    tools:context=".CommunityLogIn">
 
     <RelativeLayout
         android:layout_width="match_parent"

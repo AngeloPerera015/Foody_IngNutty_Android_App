@@ -19,25 +19,23 @@ import com.f_in.foodyingnutty.R;
 import com.google.firebase.database.DatabaseReference;
 
 import java.util.List;
-
+//this is to create the user messages and hold values
 public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageAdapterViewHolder> {
+    //declare variables
     Context context;
     DatabaseReference messageDb;
     List<Message> messages;
-
     public MessageAdapter(Context context, List<Message> messages, DatabaseReference messageDb) {
         this.context = context;
         this.messageDb = messageDb;
         this.messages = messages;
     }
-
     @NonNull
     @Override
     public MessageAdapterViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.item_message,parent,false);
         return new MessageAdapterViewHolder(view);
     }
-
     @Override
     public void onBindViewHolder(@NonNull MessageAdapterViewHolder holder, int position) {
         Message message = messages.get(position);
@@ -51,23 +49,21 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageA
             holder.btnDelete.setVisibility(View.GONE);
         }
     }
-
     @Override
     public int getItemCount() {
         return messages.size();
     }
-
+    //declare variables
     public class MessageAdapterViewHolder extends RecyclerView.ViewHolder{
         TextView tvTitle;
         ImageButton btnDelete;
         LinearLayout l1;
-
         public MessageAdapterViewHolder(@NonNull View itemView) {
             super(itemView);
             tvTitle = (TextView) itemView.findViewById(R.id.tvTitle);
             btnDelete = (ImageButton) itemView.findViewById(R.id.btnDelete);
             l1 = (LinearLayout) itemView.findViewById(R.id.l1Message);
-
+            //button to delete the message
             btnDelete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

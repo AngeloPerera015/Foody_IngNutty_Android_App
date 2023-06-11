@@ -32,9 +32,9 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
-
-public class community_screen extends AppCompatActivity implements View.OnClickListener{
-
+//this is to create the user-to message in the community which runs on the firebase
+public class Community extends AppCompatActivity implements View.OnClickListener{
+    //declare variables
     FirebaseAuth auth;
     FirebaseDatabase database;
     DatabaseReference messagedb;
@@ -48,12 +48,10 @@ public class community_screen extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_community_screen);
-
+        setContentView(R.layout.activity_community);
         init();
-
+        //popup menu to logout into the login
         ImageView leftIcon = findViewById(R.id.left_icon);
-
         leftIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,9 +59,8 @@ public class community_screen extends AppCompatActivity implements View.OnClickL
             }
         });
     }
-
     private void showMenu(View view){
-        PopupMenu popupMenu = new PopupMenu(community_screen.this,view);
+        PopupMenu popupMenu = new PopupMenu(Community.this,view);
         popupMenu.getMenuInflater().inflate(R.menu.logout_menu, popupMenu.getMenu());
         popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
@@ -71,26 +68,23 @@ public class community_screen extends AppCompatActivity implements View.OnClickL
                 if (menuItem.getItemId() == R.id.menulogout)
                     auth.signOut();
                     finish();
-                    startActivity(new Intent(community_screen.this, community_log_in.class));
+                    startActivity(new Intent(Community.this, CommunityLogIn.class));
                 return true;
             }
         });
         popupMenu.show();
     }
-
     private void init() {
         auth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
         u = new User();
-
         rvMessage = (RecyclerView) findViewById(R.id.rvMessage);
         etmessage = (EditText) findViewById(R.id.etMessage);
         imgButton = (ImageButton) findViewById(R.id.btnSend);
-
         imgButton.setOnClickListener(this);
         messages = new ArrayList<>();
     }
-
+    //messaging
     @Override
     public void onClick(View view) {
         if (!TextUtils.isEmpty(etmessage.getText().toString())) {
@@ -102,15 +96,13 @@ public class community_screen extends AppCompatActivity implements View.OnClickL
             Toast.makeText(this, "You can't send blank message", Toast.LENGTH_SHORT).show();
         }
     }
-
+    //show the username and message
     @Override
     protected void onStart() {
         super.onStart();
         final FirebaseUser currentUser = auth.getCurrentUser();
-
         u.setUid(currentUser.getUid());
         u.setName(currentUser.getEmail());
-
         database.getReference("Users").child(currentUser.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -118,10 +110,8 @@ public class community_screen extends AppCompatActivity implements View.OnClickL
                 u.setUid(currentUser.getUid());
                 AllMethods.name = u.getName();
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
             }
         });
         messagedb = database.getReference("messages");
@@ -133,14 +123,11 @@ public class community_screen extends AppCompatActivity implements View.OnClickL
                 messages.add(message);
                 displayMessages(messages);
             }
-
             @Override
             public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
                 Message message = snapshot.getValue(Message.class);
                 message.setKey(snapshot.getKey());
-
                 List<Message> newMessages = new ArrayList<Message>();
-
                 for (Message m: messages) {
                     if (m.getKey().equals(message.getKey())) {
                         newMessages.add(message);
@@ -152,14 +139,11 @@ public class community_screen extends AppCompatActivity implements View.OnClickL
                 messages = newMessages;
                 displayMessages(messages);
             }
-
             @Override
             public void onChildRemoved(@NonNull DataSnapshot snapshot) {
                 Message message = snapshot.getValue(Message.class);
                 message.setKey(snapshot.getKey());
-
                 List<Message> newMessages = new ArrayList<Message>();
-
                 for (Message m:messages) {
                     if (!m.getKey().equals(message.getKey())) {
                         newMessages.add(m);
@@ -168,28 +152,22 @@ public class community_screen extends AppCompatActivity implements View.OnClickL
                 messages = newMessages;
                 displayMessages(messages);
             }
-
             @Override
             public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
             }
         });
     }
-
     @Override
     protected void onResume() {
         super.onResume();
         messages = new ArrayList<>();
     }
-
     private void displayMessages(List<Message> messages) {
-        rvMessage.setLayoutManager(new LinearLayoutManager(community_screen.this));
-        messageAdapter = new MessageAdapter(community_screen.this,messages,messagedb);
+        rvMessage.setLayoutManager(new LinearLayoutManager(Community.this));
+        messageAdapter = new MessageAdapter(Community.this,messages,messagedb);
         rvMessage.setAdapter(messageAdapter);
     }
 }
