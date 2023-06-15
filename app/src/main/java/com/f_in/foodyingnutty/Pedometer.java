@@ -1,9 +1,7 @@
 package com.f_in.foodyingnutty;
 
 import android.Manifest;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -184,17 +182,9 @@ public class Pedometer extends AppCompatActivity implements SensorEventListener 
                 previewsTotalSteps = totalSteps;
                 steps.setText("0");
                 progressBar.setProgress(0);
-                saveData();
                 return true;
             }
         });
-    }
-    //when the user exit from the application and come back the step count shows total steps from the day step counter start
-    private void saveData() {
-        SharedPreferences sharedPref = getSharedPreferences("myPref", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putString("key1", String.valueOf(previewsTotalSteps));
-        editor.apply();
     }
     @Override
     public void onAccuracyChanged(Sensor sensor, int i) {
