@@ -156,7 +156,7 @@ public class Pedometer extends AppCompatActivity implements SensorEventListener 
         super.onPause();
         mSensorManager.unregisterListener(this);
     }
-    //when the user moves the sensor sends a signal to update steps and start the progress in progress bar
+    //when the user moves the sensor sends a signal to update steps count and start the progress in progress bar
     @Override
     public void onSensorChanged(SensorEvent sensorEvent) {
         if (sensorEvent.sensor.getType() == Sensor.TYPE_STEP_COUNTER) {
