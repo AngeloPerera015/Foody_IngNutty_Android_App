@@ -1,6 +1,7 @@
 package com.f_in.foodyingnutty;
 
 import android.Manifest;
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.Sensor;
@@ -188,5 +189,12 @@ public class Pedometer extends AppCompatActivity implements SensorEventListener 
     }
     @Override
     public void onAccuracyChanged(Sensor sensor, int i) {
+    }
+    //image button to the user to get informed on how to reset current steps count
+    public void stepcounterInfo (View view) {
+        Dialog dialog = new Dialog(Pedometer.this, R.style.DialogStyle);
+        dialog.setContentView(R.layout.step_counter_info);
+        dialog.getWindow().setBackgroundDrawableResource(R.drawable.bg_window);
+        dialog.show();
     }
 }

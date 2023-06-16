@@ -11,14 +11,6 @@ public class ExpandableListDataPump {
         List<String> listItem1 = new ArrayList<String>();
         listItem1.add("Munchee Super Cream Cracker - 190g");
         listItem1.add("Revello Cashew - 170g");
-        listItem1.add("Tiara Chocolate Sponge Layer Cake - 480g");
-        listItem1.add("Maliban Chocolate Cream Biscuit - 400g");
-        listItem1.add("Snickers Chocolate - 51g");
-        listItem1.add("Cadbury Dairy Milk, Hazelnut - 160g");
-        listItem1.add("Kist Magic Cho-co -160g");
-        listItem1.add("Samaposha - 200g");
-        listItem1.add("Magna Jumbo Peanuts - 80g");
-        listItem1.add("Rancrisp Cassava Chips Hot & Spicy - 100g");
 
         List<String> listItem2 = new ArrayList<String>();
         listItem2.add("");
