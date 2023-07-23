@@ -92,7 +92,6 @@ public class MainActivity extends AppCompatActivity {
     //when the back button toast to press again if pressed twice within 2 sec. exit from the application
     @Override
     public void onBackPressed() {
-
         if (pressedTime + 2000 > System.currentTimeMillis()) {
             super.onBackPressed();
             finish();
