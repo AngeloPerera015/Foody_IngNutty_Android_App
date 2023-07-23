@@ -1,8 +1,8 @@
 # Foody_IngNutty_Android_App
 
-This is an Android application project that I am completing and continuing for my 2nd-year university degree. This idea came to mind because I’m a consumer who pays attention to off-the-shelf food ingredients and nutrition. To be aware of that, one must check with the actual product that is on shelves or at home, this application can browse on a fingertip to get aware of food ingredients and nutrition.
+This is an Android application project that I am completing and continuing for my 2nd-year university degree. This idea came to mind because I’m a consumer who pays attention to off-the-shelf food ingredients and nutrition. To be aware of that, one must check with the actual product that is on shelves or at home. This application can be browsed on a fingertip to get aware of food ingredients and nutrition.
 
-The name is Foody IngNutty acronym for food ingredients and nutrition. It aims to provide off-the-shelf food products ingredients and nutrition as it’s necessary to make aware for customers. Also, it contains useful features to improve/maintain a healthy lifestyle for the user.
+The name is Foody IngNutty, an acronym for food ingredients and nutrition. It aims to provide off-the-shelf food products with ingredients and nutrition, as it’s necessary to make customers aware of this. Also, it contains useful features to improve and maintain a healthy lifestyle for the user.
 
 The application system design (functionalities) is as follows:
 ![Foody IngNutty drawio](https://github.com/AngeloPerera015/Foody_IngNutty_Android_App/assets/90715440/a1e82324-759d-4897-9a06-4ba412c3b111)
@@ -11,7 +11,7 @@ The application's features and functionalities are as follows:
 
 From the beginning, the user can use the application without signing in. From the Main screen, the user can view the Image slider, and from the Image button, they can move forward to the Product category to get information on selected food Ingredients and Nutrition in a Dialog box.
 
-On the Main screen Hamburger Menu(available on primary screens), More to access the Nutrition plan which shows the food pyramid in a Piechart, and the Health advice plays some Videos on healthy tips and a Check box checklist to check the user to Evaluate, and a Pedometer to show the user’s step count and Location.
+On the Main screen, Hamburger Menu (available on primary screens), More to access the Nutrition plan, which shows the food pyramid in a Pie chart, and the Health advice plays some Videos on healthy tips and a Check box checklist to check the user to Evaluate, and a Pedometer to show the user’s step count and Location.
 
 After the More, in Reach Us E-mail to communicate with the service provider, in Google Form to provide Feedback and Suggestions, and in Community, the user can Sign up and communicate with other users as well.
 
