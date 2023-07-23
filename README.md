@@ -1,6 +1,6 @@
 # Foody_IngNutty_Android_App
 
-This is an Android application project that I am completing and continuing for my 2nd-year university degree. This idea came to mind because I’m a consumer who pays attention to off-the-shelf food ingredients and nutrition. To be aware of that, one must check the actual product that is on shelves or at home. This application can be browsed with a fingertip to become aware of food ingredients and nutrition.
+This is an Android application project that I am completing and continuing for my 2nd-year university degree. This idea came to mind because I’m a consumer who pays attention to off-the-shelf food ingredients and nutrition. To be aware of that, one must check the actual product that is on the shelves or at home. This application can be browsed with a fingertip to become aware of food ingredients and nutrition.
 
 The name is Foody IngNutty, an acronym for food ingredients and nutrition. It aims to provide off-the-shelf food products with ingredients and nutrition, as it’s necessary to make customers aware of this. Also, it contains useful features to improve and maintain a healthy lifestyle for the user.
 
